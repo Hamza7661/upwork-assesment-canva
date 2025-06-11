@@ -1,0 +1,32 @@
+<div class="page-content">
+  <h1 class="page-heading">Orders and invoices</h1>
+
+  <div class="flex flex-wrap gap-4 items-center">
+    <div class="input-container">
+      <label>Search for Invoice ID</label>
+      <input type="text" placeholder="34874-9052016" style="padding-left: 1.5rem;" />
+      <i class="fa fa-search input-search-icon" style="top: 55%;"></i>
+    </div>
+
+    <div class="input-container">
+      <label>Filter by type</label>
+      <select>
+        <option>Any item type</option>
+        <option>Subscription</option>
+        <option>Purchase</option>
+      </select>
+    </div>
+
+    <div class="input-container">
+       <label>Filter by date</label>
+      <select>
+        <option>All dates</option>
+        <option>Last 30 days</option>
+        <option>Last 6 months</option>
+      </select>
+    </div>
+
+  </div>
+
+   <app-table [columns]="tableColDefs" [data]="orders"></app-table>
+</div>

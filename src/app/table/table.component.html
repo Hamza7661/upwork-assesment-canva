@@ -1,0 +1,25 @@
+<div>
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th *ngFor="let col of columns" class="">{{ col.label }}</th>
+                <th class="px-6 py-3">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="!data.length">
+                <td [attr.colspan]="columns.length + 1" class="no-result-table-container">
+                    <div>
+                        <span>No results found</span>
+                    </div>
+                </td>
+            </tr>
+            <tr *ngFor="let row of data">
+                <td *ngFor="let col of columns" class="table-cell">
+                    {{ row[col.key] }}
+                </td>
+                <td class="action-cell">View</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

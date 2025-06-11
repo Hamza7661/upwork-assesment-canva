@@ -1,0 +1,63 @@
+@import "tailwindcss";
+.layout-container {
+    @apply flex h-screen;
+}
+
+.icon-sidebar {
+    @apply w-20 bg-violet-50 pb-4 pt-1 flex flex-col items-center space-y-6 h-screen border-r border-gray-300;
+}
+
+.icon-sidebar .fa-navicon,
+.icon-sidebar-bottom-container .fa-bell-o {
+    @apply text-2xl text-gray-600 cursor-pointer;
+}
+
+.icon-sidebar-bottom-container {
+    @apply mt-auto
+}
+
+.icon-button {
+    @apply w-10 h-10 flex flex-col items-center justify-center transition text-2xl cursor-pointer;
+}
+
+.icon-button span {
+    @apply text-[0.7rem]
+}
+
+.active-icon {
+    @apply text-purple-600;
+}
+
+.inactive-icon,
+.icon-sidebar .fa-navicon,
+.icon-sidebar-bottom-container .fa-bell-o {
+    @apply text-gray-500 hover:text-purple-600;
+}
+
+.logo-wrapper {
+    @apply w-20 pl-4;
+}
+
+.sidebar-wrapper {
+    @apply flex flex-col h-full;
+}
+
+.sidebar-container {
+    @apply w-64 h-screen p-4;
+}
+
+.sidebar-category-title {
+    @apply text-[0.7rem] font-bold text-gray-500 mb-2;
+}
+
+.menu-container {
+    @apply flex items-center font-[400] text-[0.82rem] py-2 rounded-md hover:bg-violet-200 transition text-gray-600;
+}
+
+.menu-container.active{
+    @apply bg-violet-200;
+}
+
+.avatar {
+    @apply bg-yellow-500 border-4 border-purple-600 text-black rounded-full w-10 h-10 flex items-center justify-center -ml-2 mt-4 font-semibold uppercase
+}

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+.custom-table{
+    @apply min-w-full text-sm text-left text-gray-700 border-b border-gray-300 min-h-[10rem]
+}
+
+.custom-table thead{
+    @apply font-[400] text-[0.8rem] text-gray-500 border-b border-gray-300
+}
+
+.no-result-table-container{
+    @apply text-center text-gray-800 font-semibold text-[0.8rem]
+}
+
+.no-result-table-container div{
+    @apply border-t border-gray-300 h-12 mt-[2rem] flex justify-center
+}
+
+.no-result-table-container div span{
+    @apply mt-auto
+}
+
+.action-cell{
+    @apply px-6 py-4 text-sm text-blue-500
+}
+
+.table-cell{
+    @apply px-6 py-4
+}

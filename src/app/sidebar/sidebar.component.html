@@ -1,0 +1,41 @@
+<div class="layout-container">
+    <div class="icon-sidebar">
+        <i class="fa fa-navicon"></i>
+
+        <ng-container *ngFor="let item of mainHeaders">
+            <button (click)="onHeaderClick(item.id)" [ngClass]="{
+          'active-icon': selectedHeaderId === item.id,
+          'inactive-icon': selectedHeaderId !== item.id
+        }" class="icon-button" [attr.title]="item.label">
+                <i class="fa {{ item.icon }}"></i>
+                <span>{{ item.label }}</span>
+            </button>
+        </ng-container>
+
+        <div class="icon-sidebar-bottom-container">
+            <i class="fa fa-bell-o"></i>
+            <div class="avatar">
+                {{ username | slice:0:1 }}
+            </div>
+        </div>
+    </div>
+
+    <div class="sidebar-wrapper">
+        <div class="logo-wrapper">
+            <img src="logos/Canva.png" />
+        </div>
+        <div class="sidebar-container">
+            <div *ngFor="let category of sidebar.categories" class="mb-4">
+                <h4 class="sidebar-category-title">{{ category.title }}</h4>
+                <ul>
+                    <li *ngFor="let menu of category.menus">
+                        <a (click)="onMenuClick(menu.id)" [ngClass]="{ 'active': selectedMenuId === menu.id }" [routerLink]="menu.route"  class="menu-container">
+                            <i class="fa {{ menu.icon }} w-5 text-center mr-2"></i>
+                            {{ menu.label }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
